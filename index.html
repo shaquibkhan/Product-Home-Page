@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Load an icon library to show a hamburger menu (bars) on small screens -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/index.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -14,7 +16,7 @@
     <title>Product Home Page</title>
   </head>
   <body>
-    <nav>
+    <nav class="medium-device-header">
       <img src="./images/logo.svg" alt="logo" />
       <div class="nav-items">
         <h5 class="nav-item active-item">Home</h5>
@@ -24,6 +26,21 @@
       </div>
       <img src="./images/actions.svg" alt="actions" />
     </nav>
+    <!-- Top Navigation Menu -->
+<div class="topnav">
+  <a href="#home" class="active">Logo</a>
+  <!-- Navigation links (hidden by default) -->
+  <div id="myLinks">
+    <a href="#news">Home</a>
+    <a href="#contact">Product</a>
+    <a href="#contact">Price</a>
+    <a href="#about">About</a>
+  </div>
+  <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+  <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+    <i class="fa fa-bars"></i>
+  </a>
+</div>
     <div class="intro-section">
       <div class="left-section">
         <h3>
@@ -70,5 +87,6 @@
         <button  id="cart" class="action-btn">Add to cart</button>
       </div>
     </div>
+    <script src="./action.js"></script>
   </body>
 </html>
